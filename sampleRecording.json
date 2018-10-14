@@ -1,0 +1,11 @@
+{
+  "config": {
+      "encoding":"FLAC",
+      "sampleRateHertz": 22050,
+      "languageCode": "en-US",
+      "enableWordTimeOffsets": false
+  },
+  "audio": {
+      "uri":"gs://react-932c4.appspot.com/Sounds/Vocaroo_s1n9z7msx8nK.flac"
+  }
+}

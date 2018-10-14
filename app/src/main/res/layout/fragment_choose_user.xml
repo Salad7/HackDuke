@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:layout_editor_absoluteY="25dp">
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/search_list"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <ProgressBar
+        android:id="@+id/progress_choose_user"
+        style="?android:attr/progressBarStyle"
+        android:layout_width="128dp"
+        android:layout_height="128dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <android.support.constraint.ConstraintLayout
+    android:id="@+id/constraintLayout"
+    android:layout_width="match_parent"
+    android:layout_height="64dp"
+    android:background="@color/colorPrimary">
+
+    <ImageView
+    android:id="@+id/market_search_icon"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginEnd="20dp"
+    android:layout_marginStart="16dp"
+    app:layout_constraintBottom_toBottomOf="parent"
+    app:layout_constraintEnd_toStartOf="@+id/market_search_et"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toTopOf="parent"
+    app:srcCompat="@drawable/search" />
+
+    <EditText
+    android:id="@+id/market_search_et"
+    android:layout_width="0dp"
+    android:layout_height="32dp"
+    android:layout_marginEnd="16dp"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
+    android:background="@drawable/round_btn_white"
+    android:ems="10"
+    android:hint="Enter the name of the user to search"
+    android:inputType="textPersonName"
+    android:paddingLeft="16dp"
+    android:textSize="16dp"
+    app:layout_constraintBottom_toBottomOf="parent"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toEndOf="@+id/market_search_icon"
+    app:layout_constraintTop_toTopOf="parent" />
+    </android.support.constraint.ConstraintLayout>
+
+    <android.support.v7.widget.RecyclerView
+    android:id="@+id/recyclelist"
+    android:layout_width="0dp"
+    android:layout_height="match_parent"
+    android:layout_marginTop="64dp"
+    android:divider="@android:color/transparent"
+    android:dividerHeight="8dp"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toTopOf="parent" />
+</android.support.constraint.ConstraintLayout>

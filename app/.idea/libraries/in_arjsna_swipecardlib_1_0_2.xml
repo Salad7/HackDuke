@@ -1,0 +1,12 @@
+<component name="libraryTable">
+  <library name="in.arjsna:swipecardlib-1.0.2">
+    <CLASSES>
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/swipecardlib-1.0.2.aar/8f43cb390bfcb92c07b04f4c25a92552/res" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/swipecardlib-1.0.2.aar/8f43cb390bfcb92c07b04f4c25a92552/jars/classes.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/in.arjsna/swipecardlib/1.0.2/c482d3912f2609cb1844a41c40483caf99c2fe20/swipecardlib-1.0.2-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <android.support.v7.widget.Toolbar
+    android:id="@+id/toolbar2"
+    android:layout_width="0dp"
+    android:layout_height="56dp"
+    android:background="?attr/colorPrimary"
+    android:minHeight="?attr/actionBarSize"
+    android:theme="?attr/actionBarTheme"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+    android:id="@+id/textView20"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginEnd="119dp"
+    android:layout_marginTop="12dp"
+    android:fontFamily="bold"
+    android:text="Video Marketplace"
+    android:textColor="#ffffff"
+    android:textSize="22dp"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toEndOf="@+id/market_finish"
+    app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+    android:id="@+id/market_finish"
+    android:layout_width="32dp"
+    android:layout_height="32dp"
+    android:layout_marginEnd="32dp"
+    android:layout_marginStart="16dp"
+    android:layout_marginTop="12dp"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toTopOf="parent"
+    app:srcCompat="@drawable/back_2" />
+
+    <ImageView
+    android:id="@+id/imageView9"
+    android:layout_width="32dp"
+    android:layout_height="32dp"
+    android:layout_marginRight="16dp"
+    android:layout_marginTop="12dp"
+    app:layout_constraintRight_toRightOf="parent"
+    app:layout_constraintTop_toTopOf="parent"
+    app:srcCompat="@drawable/settings_2" />
+
+    <android.support.constraint.ConstraintLayout
+    android:id="@+id/constraintLayout211"
+    android:layout_width="match_parent"
+    android:layout_marginTop="56dp"
+    android:layout_height="64dp"
+    android:background="@color/colorPrimary"
+    app:layout_constraintLeft_toLeftOf="parent"
+    app:layout_constraintRight_toRightOf="parent"
+    app:layout_constraintTop_toTopOf="parent">
+
+
+
+    <ImageView
+    android:id="@+id/market_search_icon"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginEnd="20dp"
+    android:layout_marginStart="16dp"
+    app:layout_constraintBottom_toBottomOf="parent"
+    app:layout_constraintEnd_toStartOf="@+id/market_search_et"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toTopOf="parent"
+    app:srcCompat="@drawable/search" />
+
+    <EditText
+    android:id="@+id/market_search_et"
+    android:layout_width="0dp"
+    android:layout_height="32dp"
+    android:layout_marginEnd="16dp"
+    android:background="@drawable/round_btn_white"
+    android:ems="10"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
+    android:hint="Enter title of video to search for"
+    android:inputType="textPersonName"
+    android:paddingLeft="16dp"
+    android:textSize="16dp"
+    app:layout_constraintBottom_toBottomOf="parent"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toEndOf="@+id/market_search_icon"
+    app:layout_constraintTop_toTopOf="parent" />
+    </android.support.constraint.ConstraintLayout>
+
+    <android.support.v7.widget.RecyclerView
+    android:id="@+id/market_rv"
+    android:layout_width="0dp"
+    android:layout_height="0dp"
+    android:layout_marginTop="120dp"
+    app:layout_constraintBottom_toBottomOf="parent"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toTopOf="parent" />
+
+    <ProgressBar
+        android:id="@+id/market_progress"
+        style="?android:attr/progressBarStyle"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+</android.support.constraint.ConstraintLayout>

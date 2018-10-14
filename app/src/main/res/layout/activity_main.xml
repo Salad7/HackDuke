@@ -4,78 +4,103 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    tools:context="com.example.cci_loaner.reactandroid.MainActivity"
+    tools:layout_editor_absoluteY="25dp">
 
 
-    <com.example.msalad.hackduke.camera.GraphicOverlay
-        android:id="@+id/graphicOverlay"
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar2"
         android:layout_width="0dp"
-        android:layout_height="0dp"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_height="wrap_content"
+        android:background="?attr/colorPrimary"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="?attr/actionBarTheme"
+        app:layout_constraintBottom_toTopOf="@+id/container_"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <com.example.msalad.hackduke.camera.CameraSourcePreview
-        android:id="@+id/preview"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
-
-    </com.example.msalad.hackduke.camera.CameraSourcePreview>>
-
-    <EditText
-        android:id="@+id/editText"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginEnd="13dp"
-        android:layout_marginBottom="16dp"
-        android:ems="10"
-        android:inputType="textPersonName"
-        android:text="Enter question for professor"
-        android:textColor="#ffffff"
-        android:textColorHint="#ffffff"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/sendMsg"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/checkBox3" />
-
-    <CheckBox
-        android:id="@+id/checkBox3"
-        android:layout_width="wrap_content"
-        android:layout_height="0dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginBottom="417dp"
-        android:text="Turn off text-ocr"
-        android:textColor="#ffffff"
-        app:layout_constraintBottom_toTopOf="@+id/editText"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/preview" />
+    <TextView
+    android:id="@+id/textView"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="16dp"
+    android:layout_marginTop="16dp"
+    android:fontFamily="bold"
+    android:text="@string/app_name"
+    android:textColor="#ffffff"
+    android:textSize="22dp"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toTopOf="parent" />
 
     <ImageView
-        android:id="@+id/sendMsg"
-        android:layout_width="48dp"
-        android:layout_height="48dp"
-        android:layout_marginEnd="16dp"
-        android:layout_marginBottom="16dp"
-        android:src="@drawable/send"
+    android:id="@+id/iv_add"
+    android:layout_width="28dp"
+    android:layout_height="28dp"
+    android:src="@drawable/adduser2"
+    android:layout_marginRight="16dp"
+    app:layout_constraintBottom_toBottomOf="@+id/toolbar2"
+    app:layout_constraintEnd_toEndOf="@+id/toolbar2"
+    app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+    android:id="@+id/iv_settings"
+    android:layout_width="28dp"
+    android:layout_height="28dp"
+    android:layout_marginEnd="64dp"
+    android:layout_marginTop="16dp"
+    android:background="@drawable/settings_2"
+    app:layout_constraintBottom_toBottomOf="@+id/toolbar2"
+    app:layout_constraintEnd_toEndOf="@+id/toolbar2"
+    app:layout_constraintTop_toTopOf="parent"
+    app:layout_constraintVertical_bias="0.0" />
+
+    <ImageView
+    android:id="@+id/iv_ticket"
+    android:layout_width="28dp"
+    android:layout_height="28dp"
+    android:layout_marginTop="16dp"
+    android:layout_marginEnd="112dp"
+    android:src="@drawable/eye"
+    app:layout_constraintBottom_toBottomOf="@+id/toolbar2"
+    app:layout_constraintEnd_toEndOf="@+id/toolbar2"
+    app:layout_constraintTop_toTopOf="parent"
+    app:layout_constraintVertical_bias="0.0" />
+
+    <ImageView
+    android:id="@+id/iv_calendar"
+    android:layout_width="28dp"
+    android:layout_height="28dp"
+    android:layout_marginTop="16dp"
+    android:layout_marginEnd="156dp"
+    android:src="@drawable/calendar2"
+    app:layout_constraintBottom_toBottomOf="@+id/toolbar2"
+    app:layout_constraintEnd_toEndOf="@+id/toolbar2"
+    app:layout_constraintTop_toTopOf="parent"
+    app:layout_constraintVertical_bias="0.0" />
+
+    <ImageView
+        android:id="@+id/iv_market"
+        android:layout_width="28dp"
+        android:layout_height="28dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="204dp"
+        android:src="@drawable/search4"
+        app:layout_constraintBottom_toBottomOf="@+id/toolbar2"
+        app:layout_constraintEnd_toEndOf="@+id/toolbar2"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
+
+
+    <FrameLayout
+        android:id="@+id/container_"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/editText" />
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar2"></FrameLayout>
 
-    <ListView
-        android:id="@+id/dynamic"
-        android:layout_width="207dp"
-        android:layout_height="189dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginBottom="8dp"
-        app:layout_constraintBottom_toTopOf="@+id/sendMsg"
-        app:layout_constraintEnd_toEndOf="@+id/preview">
 
-    </ListView>
 </android.support.constraint.ConstraintLayout>

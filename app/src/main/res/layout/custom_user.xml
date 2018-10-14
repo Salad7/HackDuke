@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="320dp"
+    android:layout_marginEnd="4dp"
+    android:layout_marginStart="4dp"
+    android:layout_marginTop="4dp">
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/delete_records_fab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:layout_marginTop="200dp"
+        android:clickable="true"
+        android:scaleType="center"
+        app:backgroundTint="@android:color/holo_red_light"
+        app:fabSize="mini"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/delete_mini" />
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/record_user_fab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:clickable="true"
+        android:scaleType="center"
+        app:fabSize="mini"
+        app:layout_constraintEnd_toStartOf="@+id/delete_records_fab"
+        app:layout_constraintTop_toTopOf="@+id/delete_records_fab"
+        app:srcCompat="@drawable/audio_mini" />
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/view_record_fab"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_marginEnd="16dp"
+        android:clickable="true"
+        android:scaleType="center"
+        app:backgroundTint="@color/colorPrimaryDark"
+        app:fabSize="mini"
+        app:layout_constraintBottom_toBottomOf="@+id/record_user_fab"
+        app:layout_constraintEnd_toStartOf="@+id/record_user_fab"
+        app:layout_constraintTop_toTopOf="@+id/record_user_fab"
+        app:srcCompat="@drawable/search_mini" />
+
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/edit_phrases_fab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:clickable="true"
+        android:scaleType="fitCenter"
+        app:backgroundTint="@color/colorLight"
+        app:fabSize="mini"
+        app:layout_constraintBottom_toBottomOf="@+id/view_record_fab"
+        app:layout_constraintEnd_toStartOf="@+id/view_record_fab"
+        app:srcCompat="@drawable/write2" />
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/fab_notes"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:clickable="true"
+        android:scaleType="fitXY"
+        app:backgroundTint="@color/colorLight"
+        app:fabSize="mini"
+        app:layout_constraintBottom_toBottomOf="@+id/cardView"
+        app:layout_constraintEnd_toStartOf="@+id/edit_phrases_fab"
+        app:layout_constraintTop_toBottomOf="@+id/cardView"
+        app:srcCompat="@drawable/notes" />
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/fab_video"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:clickable="true"
+        android:scaleType="fitXY"
+        app:backgroundTint="@color/colorLight"
+        app:fabSize="mini"
+        app:layout_constraintBottom_toBottomOf="@+id/cardView"
+        app:layout_constraintEnd_toStartOf="@+id/fab_notes"
+        app:layout_constraintTop_toBottomOf="@+id/cardView"
+        app:srcCompat="@drawable/video" />
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/cardView"
+        android:layout_width="match_parent"
+        android:layout_height="220dp"
+        android:elevation="6dp">
+
+        <android.support.constraint.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/iv_restart"
+                android:layout_width="0dp"
+                android:layout_height="80dp"
+                android:background="@color/colorPrimaryDark"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/user_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="8dp"
+                android:text="Mohamed Salad"
+                android:textColor="#ffffff"
+                android:textSize="22dp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/user_date"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="9dp"
+                android:fontFamily="sans-serif-light"
+                android:text="March 23rd."
+                android:textColor="#ffffff"
+                android:textSize="18dp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/user_name" />
+
+            <ListView
+                android:id="@+id/list_of_recordings_date"
+                android:layout_width="match_parent"
+                android:layout_height="144dp"
+                android:divider="@android:color/transparent"
+                android:dividerHeight="4dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent" />
+
+            <TextView
+                android:id="@+id/user_records"
+                android:layout_width="80dp"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:layout_marginRight="16dp"
+                android:gravity="center"
+                android:text="71"
+                android:textColor="#ffffff"
+                android:textSize="24dp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="@+id/iv_restart"
+                app:layout_constraintRight_toRightOf="parent" />
+
+            <TextView
+                android:id="@+id/textView2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="16dp"
+                android:layout_marginTop="8dp"
+                android:text="Records"
+                android:textColor="#ffffff"
+                android:textSize="22dp"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        </android.support.constraint.ConstraintLayout>
+
+    </android.support.v7.widget.CardView>
+
+    <TextView
+        android:id="@+id/user_noteCount"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="59dp"
+        android:layout_marginTop="20dp"
+        android:gravity="center"
+        android:text="100"
+        android:textColor="#000000"
+        android:textSize="14dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/fab_notes"
+        app:layout_constraintStart_toStartOf="@+id/fab_notes"
+        app:layout_constraintTop_toBottomOf="@+id/cardView" />
+
+
+</android.support.constraint.ConstraintLayout>

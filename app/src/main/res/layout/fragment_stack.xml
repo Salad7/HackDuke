@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:layout_editor_absoluteY="25dp">
+    <android.support.constraint.ConstraintLayout
+    android:id="@+id/constraintLayout"
+    android:layout_width="match_parent"
+    android:layout_height="64dp"
+    android:background="@color/colorPrimary"
+    app:layout_constraintLeft_toLeftOf="parent"
+    app:layout_constraintRight_toRightOf="parent"
+    app:layout_constraintTop_toTopOf="parent">
+
+    <ImageView
+    android:id="@+id/market_search_icon"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginEnd="20dp"
+    android:layout_marginStart="16dp"
+    app:layout_constraintBottom_toBottomOf="parent"
+    app:layout_constraintEnd_toStartOf="@+id/market_search_et"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toTopOf="parent"
+    app:srcCompat="@drawable/search" />
+
+    <EditText
+    android:id="@+id/market_search_et"
+    android:layout_width="0dp"
+    android:layout_height="32dp"
+    android:layout_marginEnd="16dp"
+    android:background="@drawable/round_btn_white"
+    android:ems="10"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
+    android:hint="Enter Title/Word's to search"
+    android:inputType="textPersonName"
+    android:paddingLeft="16dp"
+    android:textSize="16dp"
+    app:layout_constraintBottom_toBottomOf="parent"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toEndOf="@+id/market_search_icon"
+    app:layout_constraintTop_toTopOf="parent" />
+    </android.support.constraint.ConstraintLayout>
+
+
+
+
+    <TextView
+    android:id="@+id/current_record_viewed"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="5dp"
+    android:layout_marginTop="16dp"
+    android:text="3/9"
+    android:textSize="22dp"
+    android:visibility="gone"
+    app:layout_constraintStart_toEndOf="@+id/note_txt"
+    app:layout_constraintTop_toTopOf="parent" />
+
+    <android.support.design.widget.FloatingActionButton
+    android:id="@+id/stack_finish"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="24dp"
+    android:layout_marginStart="16dp"
+    android:clickable="true"
+    android:scaleType="fitCenter"
+    app:backgroundTint="@color/colorPrimaryDark"
+    app:fabSize="normal"
+    app:layout_constraintBottom_toBottomOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:srcCompat="@drawable/back_2" />
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/videoPager"
+        android:layout_width="match_parent"
+        android:layout_height="355dp"
+        android:visibility="visible"
+        android:layout_marginTop="16dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.452" />
+
+    <android.support.design.widget.FloatingActionButton
+    android:id="@+id/stack_recording"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="24dp"
+    android:layout_marginEnd="16dp"
+    android:clickable="true"
+    android:scaleType="fitCenter"
+    android:tint="#ffffff"
+    app:fabSize="normal"
+    app:layout_constraintBottom_toBottomOf="parent"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:srcCompat="@drawable/spectrum2" />
+
+    <in.arjsna.swipecardlib.SwipeCardView
+        android:id="@+id/stack"
+        android:layout_width="match_parent"
+        android:layout_marginTop="16dp"
+        android:layout_height="375dp"
+        android:layout_weight="1"
+        app:bottom_swipe_detect="false"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+    </in.arjsna.swipecardlib.SwipeCardView>
+
+    <ProgressBar
+    android:id="@+id/stack_progress"
+    style="?android:attr/progressBarStyleHorizontal"
+    android:layout_width="0dp"
+    android:layout_height="0dp"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toTopOf="parent" />
+
+    <Spinner
+        android:id="@+id/mediaOptions"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="72dp"
+        android:entries="@array/media"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <android.support.design.widget.FloatingActionButton
+    android:id="@+id/view_transcript"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="24dp"
+    android:layout_marginEnd="16dp"
+    android:clickable="true"
+    android:scaleType="fitCenter"
+    android:src="@drawable/spectre"
+    app:backgroundTint="@color/colorLight"
+    app:fabSize="normal"
+    app:layout_constraintBottom_toBottomOf="parent"
+    app:layout_constraintEnd_toStartOf="@+id/stack_recording" />
+
+    <TextView
+    android:id="@+id/textView3"
+    android:layout_width="0dp"
+    android:layout_height="wrap_content"
+    android:gravity="center"
+    android:text="Home"
+    app:layout_constraintEnd_toEndOf="@+id/stack_finish"
+    app:layout_constraintStart_toStartOf="@+id/stack_finish"
+    app:layout_constraintTop_toBottomOf="@+id/stack_finish" />
+
+    <TextView
+    android:id="@+id/textView6"
+    android:layout_width="0dp"
+    android:layout_height="wrap_content"
+    android:gravity="center"
+    android:text="View"
+    app:layout_constraintEnd_toEndOf="@+id/view_transcript"
+    app:layout_constraintStart_toStartOf="@+id/view_transcript"
+    app:layout_constraintTop_toBottomOf="@+id/view_transcript" />
+
+    <TextView
+    android:id="@+id/textView7"
+    android:layout_width="0dp"
+    android:layout_height="wrap_content"
+    android:layout_marginEnd="15dp"
+    android:layout_marginStart="17dp"
+    android:gravity="center"
+    android:text="Record"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toEndOf="@+id/view_transcript"
+    app:layout_constraintTop_toBottomOf="@+id/stack_recording" />
+
+
+</android.support.constraint.ConstraintLayout>
